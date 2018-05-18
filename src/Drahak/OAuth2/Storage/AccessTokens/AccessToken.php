@@ -2,7 +2,7 @@
 namespace Drahak\OAuth2\Storage\AccessTokens;
 
 use DateTime;
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Base AccessToken entity
@@ -14,8 +14,9 @@ use Nette\Object;
  * @property-read string|int $clientId
  * @property-read array $scope
  */
-class AccessToken extends Object implements IAccessToken
+class AccessToken implements IAccessToken
 {
+    use SmartObject;
 
 	/** @var string */
 	private $accessToken;

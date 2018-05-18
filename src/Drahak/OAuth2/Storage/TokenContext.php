@@ -2,15 +2,16 @@
 namespace Drahak\OAuth2\Storage;
 
 use Drahak\OAuth2\InvalidStateException;
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * TokenContext
  * @package Drahak\OAuth2\Token
  * @author Drahomír Hanák
  */
-class TokenContext extends Object
+class TokenContext
 {
+    use SmartObject;
 
 	/** @var array */
 	private $tokens = array();

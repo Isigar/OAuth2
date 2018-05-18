@@ -2,7 +2,7 @@
 namespace Drahak\OAuth2\Storage\AuthorizationCodes;
 
 use DateTime;
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Base AuthorizationCode entity
@@ -14,8 +14,9 @@ use Nette\Object;
  * @property-read string|int $clientId
  * @property-read array $scope
  */
-class AuthorizationCode extends Object implements IAuthorizationCode
+class AuthorizationCode implements IAuthorizationCode
 {
+    use SmartObject;
 
 	/** @var string */
 	private $authorizationCode;

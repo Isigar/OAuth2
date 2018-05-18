@@ -2,7 +2,7 @@
 namespace Drahak\OAuth2\Storage\RefreshTokens;
 
 use DateTime;
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * RefreshToken
@@ -13,8 +13,9 @@ use Nette\Object;
  * @property-read DateTime $expires
  * @property-read string|int $clientId
  */
-class RefreshToken extends Object implements IRefreshToken
+class RefreshToken implements IRefreshToken
 {
+    use SmartObject;
 
 	/** @var string */
 	private $refreshToken;

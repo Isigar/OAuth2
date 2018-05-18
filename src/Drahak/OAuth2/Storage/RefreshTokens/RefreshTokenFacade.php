@@ -2,10 +2,10 @@
 namespace Drahak\OAuth2\Storage\RefreshTokens;
 
 use Drahak\OAuth2\IKeyGenerator;
-use Drahak\OAuth2\Storage\ITokenFacade;
-use Drahak\OAuth2\Storage\InvalidRefreshTokenException;
 use Drahak\OAuth2\Storage\Clients\IClient;
-use Nette\Object;
+use Drahak\OAuth2\Storage\InvalidRefreshTokenException;
+use Drahak\OAuth2\Storage\ITokenFacade;
+use Nette\SmartObject;
 
 /**
  * RefreshToken
@@ -15,8 +15,9 @@ use Nette\Object;
  * @property-read int $lifetime
  * @property-read IRefreshTokenStorage $storage
  */
-class RefreshTokenFacade extends Object implements ITokenFacade
+class RefreshTokenFacade implements ITokenFacade
 {
+    use SmartObject;
 
 	/** @var IRefreshTokenStorage */
 	private $storage;

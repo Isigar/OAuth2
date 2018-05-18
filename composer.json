@@ -1,5 +1,5 @@
 {
-	"name": "drahak/oauth2",
+	"name": "isigar/oauth2",
 	"type": "library",
 	"description": "Nette OAuth2 Provider bundle",
 	"keywords": ["nette", "OAuth2", "provider", "server", "drahak"],
@@ -9,6 +9,10 @@
 		{
 			"name": "Drahomír Hanák",
 			"homepage": "http://www.drahak.eu"
+		},
+		{
+			"name": "Stanislav Opletal",
+			"homepage": "https://relisoft.cz"
 		}
 	],
 	"config": {

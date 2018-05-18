@@ -2,15 +2,16 @@
 namespace Drahak\OAuth2\Http;
 
 use Nette\Http\IRequest;
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Input parser
  * @package Drahak\OAuth2\Http
  * @author Drahomír Hanák
  */
-class Input extends Object implements IInput
+class Input implements IInput
 {
+    use SmartObject;
 
 	/** @var IRequest */
 	private $request;

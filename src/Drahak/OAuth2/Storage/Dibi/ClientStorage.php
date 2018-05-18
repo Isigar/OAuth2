@@ -1,19 +1,20 @@
 <?php
 namespace Drahak\OAuth2\Storage\Dibi;
 
-use Drahak\OAuth2\Storage\Clients\IClientStorage;
-use Drahak\OAuth2\Storage\Clients\IClient;
 use Drahak\OAuth2\Storage\Clients\Client;
+use Drahak\OAuth2\Storage\Clients\IClient;
+use Drahak\OAuth2\Storage\Clients\IClientStorage;
 use Nette\Database\Context;
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Nette database client storage
  * @package Drahak\OAuth2\Storage\Clients
  * @author Drahomír Hanák
  */
-class ClientStorage extends Object implements IClientStorage
+class ClientStorage implements IClientStorage
 {
+    use SmartObject;
 
 	/** @var \DibiConnection */
 	private $context;

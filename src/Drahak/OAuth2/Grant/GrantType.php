@@ -3,15 +3,14 @@ namespace Drahak\OAuth2\Grant;
 
 use Drahak\OAuth2\Http\IInput;
 use Drahak\OAuth2\InvalidClientException;
+use Drahak\OAuth2\Storage\AccessToken;
 use Drahak\OAuth2\Storage\Clients\IClient;
 use Drahak\OAuth2\Storage\Clients\IClientStorage;
-use Drahak\OAuth2\Storage\AccessToken;
 use Drahak\OAuth2\Storage\RefreshTokenFacade;
-use Drahak\OAuth2\InvalidStateException;
 use Drahak\OAuth2\Storage\TokenContext;
 use Drahak\OAuth2\UnauthorizedClientException;
-use Nette\Object;
 use Nette\Security\User;
+use Nette\SmartObject;
 
 /**
  * GrantType
@@ -20,8 +19,9 @@ use Nette\Security\User;
  *
  * @property-read string $identifier
  */
-abstract class GrantType extends Object implements IGrant
+abstract class GrantType implements IGrant
 {
+    use SmartObject;
 
 	const SCOPE_KEY = 'scope';
 	const CLIENT_ID_KEY = 'client_id';

@@ -3,20 +3,21 @@ namespace Drahak\OAuth2\Storage\NDB;
 
 use Drahak\OAuth2\InvalidScopeException;
 use Drahak\OAuth2\Storage\AuthorizationCodes\AuthorizationCode;
-use Drahak\OAuth2\Storage\AuthorizationCodes\IAuthorizationCodeStorage;
 use Drahak\OAuth2\Storage\AuthorizationCodes\IAuthorizationCode;
+use Drahak\OAuth2\Storage\AuthorizationCodes\IAuthorizationCodeStorage;
 use Nette\Database\Context;
 use Nette\Database\SqlLiteral;
 use Nette\Database\Table\ActiveRow;
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * AuthorizationCode
  * @package Drahak\OAuth2\Storage\AuthorizationCodes
  * @author Drahomír Hanák
  */
-class AuthorizationCodeStorage extends Object implements IAuthorizationCodeStorage
+class AuthorizationCodeStorage implements IAuthorizationCodeStorage
 {
+    use SmartObject;
 
 	/** @var Context */
 	private $context;

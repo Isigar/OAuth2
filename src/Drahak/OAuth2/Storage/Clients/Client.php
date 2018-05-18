@@ -1,7 +1,7 @@
 <?php
 namespace Drahak\OAuth2\Storage\Clients;
 
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * OAuth2 base client caret
@@ -12,8 +12,9 @@ use Nette\Object;
  * @property-read string $secret
  * @property-read string $redirectUrl
  */
-class Client extends Object implements IClient
+class Client implements IClient
 {
+    use SmartObject;
 
 	/** @var string|int */
 	private $id;

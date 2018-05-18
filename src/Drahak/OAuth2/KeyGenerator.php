@@ -8,8 +8,9 @@ use Nette\Object;
  * @package Drahak\OAuth2
  * @author Drahomír Hanák
  */
-class KeyGenerator extends Object implements IKeyGenerator
+class KeyGenerator implements IKeyGenerator
 {
+    use SmartObject;
 
 	/** Key generator algorithm */
 	const ALGORITHM = 'sha256';
