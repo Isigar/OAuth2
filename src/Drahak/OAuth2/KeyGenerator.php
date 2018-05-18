@@ -1,7 +1,7 @@
 <?php
 namespace Drahak\OAuth2;
 
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * KeyGenerator
